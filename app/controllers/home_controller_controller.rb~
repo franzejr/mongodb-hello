@@ -1,0 +1,7 @@
+class HomeControllerController < ApplicationController
+    def index
+        message = params[:message]
+        Message.create(message: message)
+        render status: :ok
+    end
+end
